@@ -1,0 +1,7 @@
+<app-sidenav></app-sidenav>
+
+<div class="container-fluid content" [class.closed]='navIsClosed' style=" width: 100%;" (click)='closeNavByTouch()'>
+
+    <router-outlet></router-outlet>
+
+</div>

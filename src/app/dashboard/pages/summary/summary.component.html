@@ -1,0 +1,130 @@
+<div class="row content">
+    <!-- <div class=" col-lg-1 col-md-12 col-sm-12 middle" style="min-width: 65%;"> -->
+    <div class="middle">
+        <div class="middle-top pr-4 pl-4 pt-4">
+            <div class="middle-top-top d-flex justify-content-between">
+                <div class="middle-top-top-left d-flex align-items-center justify-content-between">
+                    <div class="img-container mr-4 d-flex justify-content-center">
+                        <img src="assets/images/prof - Copy.png" alt="" class="pic">
+                    </div>
+                    <span style="color: #ffffffc9;">Good Morning, Thomas</span>
+                </div>
+                <div class="middle-top-top-right">
+                    <button class="middle-transfer-funds-button btn">Transfer funds</button>
+                </div>
+            </div>
+            <div class="middle-top-bottom">
+                <div class="current-balance text-white mt-5">
+                    <div class="amount d-flex align-items-baseline">
+                        $ <h1 style="font-weight:normal;">1,475.23</h1>
+                    </div>
+                    <div style="color: #ffffffc9;">Current Balance</div>
+                </div>
+                <div style="text-align: center; width: 90%; margin: auto;">
+                    <div id="spark3" class="apex-charts "></div>
+                    <!-- <img src="assets/images/chart-crop.jpg" alt=""> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-bottom" style="font-size: 13px">
+            <div class="middle-bottom-left col-lg-6 p-0" style=" padding-left: 0">
+                <div class="hidden"></div>
+                <div class="top d-flex justify-content-between mt-4">
+                    <span>Exchange</span>
+                    <span><i class="fas fa-sync"></i></span>
+                </div>
+                <div class="rates d-flex justify-content-between border-bottom mt-4">
+                    <div>
+                        <span style="font-size: 10px; margin-right: 7px;">Sell</span>
+                        <span><b>4,000.00</b></span>
+                    </div>
+                    <div class="mb-2">
+                        <span style="margin-right: 7px;">USD</span>
+                        <span style="font-size: 13px;"><i class="fas fa-caret-down"></i></span>
+                    </div>
+                </div>
+                <div class="rates d-flex justify-content-between border-bottom mt-4">
+                    <div>
+                        <span style="font-size: 10px; margin-right: 7px;">Buy</span>
+                        <span><b>3,371.97</b></span>
+                    </div>
+                    <div class="mb-2">
+                        <span style="margin-right: 7px;">EURO</span>
+                        <span style="font-size: 13px;"><i class="fas fa-caret-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-bottom-right col-lg-6 p-4">
+                <div class="d-flex justify-content-center align-items-center mt-3 check">
+                    <i class="fas fa-check-double" style="font-size: 13px;"></i>
+                </div>
+                <div class="mt-3">
+                    <b>Great job!</b> This month's average balance is more than last month's.
+                </div>
+                <div class="mt-4" style="color: #3e3dc5; font-size: 10px;">
+                    <b style="color: black; font-size: 13px;">$1,277.40</b> /this month
+                </div>
+                <div class="d-flex mt-3">
+                    <div style="height: 4px; background-color:#3e3dc5; width: 60%;"></div>
+                    <div style="height: 4px; background-color:#8ebfe8; width: 40%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="col-lg-1 col-md-12 col-sm-12 right" style="min-width: 35%;"> -->
+    <div class="right" style="">
+        <div class="right-top">
+            <div class="gallery js-flickity">
+                <div class="gallery-cell" *ngFor='let card of cards' [style.background]=card.color>
+                    <div class="card-logo">
+                        <img src="assets/images/card-pic.png" class="logo" alt="">
+                    </div>
+                    <div style="margin-top: auto;">
+                        <div class="card-holder-name">{{card.name}}</div>
+                        <div class="card-details">
+                            <span>**** {{card.lastDigits}}</span>
+                            <span>{{card.date}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-bottom p-4" style="font-size: 13px; position: relative;">
+            <div class="d-flex justify-content-between">
+                <a routerLink=""><span>Recent activity</span></a>
+                <a routerLink="" routerLinkActive="active"><span>All activity</span></a>
+            </div>
+            <ul class="p-0 activities">
+                <li *ngFor='let activity of activities' class="d-flex justify-content-between mt-4"
+                    style="font-size: 13px;">
+                    <div class="activity-list-left d-flex">
+                        <div class="product-logo mr-3">
+                            <b>{{activity.logo}}</b>
+                        </div>
+                        <div class="product-details">
+                            <div class=" market" style="font-weight: 500;">
+                                {{activity.place}}
+                            </div>
+                            <div class="product" style="font-weight:100;">
+                                {{activity.item}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activity-list-right">
+                        <div style="font-weight: 500;">
+                            {{activity.transfer}}
+                        </div>
+                        <div style="font-weight: 100;">
+                            {{activity.date}}
+                        </div>
+                    </div>
+                </li>
+                <li style="margin-top: 50px;"></li>
+            </ul>
+            <div class="cover"></div>
+        </div>
+    </div>
+</div>

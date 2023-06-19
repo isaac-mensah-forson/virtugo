@@ -1,0 +1,152 @@
+  .active, .active li{
+      color: #3e3dc5 ;
+  }
+
+  .left{
+    height: 100%;
+    padding: 0;
+    background-color: white;
+    position:fixed;
+    z-index: 99;
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* align-content: space-between; */
+    /* padding-top: 40px; */
+    /* padding-bottom: 30px; */
+    font-size: 14px;
+    font-weight: 550;
+    transition: 0.1s
+  }
+
+  .left-top{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 5vh;
+}
+  .left-middle{
+    margin-top:20vh;
+  }
+  .left-bottom{
+    margin-top: 30vh;
+    display: flex;
+    align-items: center;
+  }
+  .left-top, .left-middle, .left-bottom{
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  .left-middle ul {
+    padding-left: 0;
+  }
+
+  .left-middle ul li {
+    list-style: none;
+    margin-top: 15px;
+  }
+
+  .left-middle a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.left.closed{
+    width: 5rem;
+}
+
+.left ul li{
+    display: flex; 
+    align-items: center;
+}
+
+.left ul li img, .left-bottom img{
+    width: 16px;
+}
+.left ul span, .left-bottom span{
+    margin-left: 15px;
+}
+
+.left.closed span{
+    display: none;
+}
+
+.closed .left-top,.closed .left-middle,.closed .left-bottom{
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.closed .left-top{
+  padding-left: 5px;
+}
+
+.closed .left-middle{
+  /* margin-top: 7rem; */
+}
+
+.closed .left-bottom{
+  /* margin-top: 12rem; */
+}
+
+.logo{
+  margin-right: 10px;
+}
+
+.closed .logo{
+  margin-right: 0;
+}
+.bars{
+    margin-left: 0; 
+    margin-right: 10px;
+    width: 17px;
+    cursor: pointer;
+}
+.bars div{
+    margin-left: 0;
+    height: 5px;
+    margin-bottom: 4px;
+    background-color: black;
+}
+
+.bar-1{
+    width:100%;
+    border-bottom-right-radius: 30%;
+    border-top-right-radius: 30%;
+}
+
+.bar-2{
+    width: 70%;
+    /* border-radius: 50px; */
+    border-bottom-right-radius: 35%;
+    border-top-right-radius: 35%;
+}
+
+.bar-3{
+    width: 30%;
+    border-radius: 50%;
+}
+
+.left.closed .bars{
+    margin-right: 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 767px) {
+    .left.closed{
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+}

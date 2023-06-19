@@ -1,0 +1,320 @@
+.content{
+    margin: auto;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+  .active li{
+      color: #3e3dc5 ;
+  }
+
+  .middle, .right {
+    height: 100%;
+    padding: 0;
+    }
+
+.right{
+    max-width: 400px;
+    display: flex;
+    flex-flow: column;
+    flex: 2;
+}
+
+.middle{
+    flex: 1;
+}
+
+  .middle-top {
+    height: 67%;
+    display: flex;
+    flex-flow: wrap;
+    background-color: #3e3dc5;
+  }
+
+  .middle-bottom {
+    display: flex;
+    height: 33%;
+  }
+
+  .middle-bottom-left .hidden{
+      border: solid #3e3dc5;
+    height: 20%;
+    background-color: #3e3dc5;
+    width: 100% !important;
+  }
+
+  .rates, .middle-bottom-left .top{
+      width: 90%;
+  }
+  .middle-bottom-right {
+    background-color: #a8d8fe;
+    height: 100% !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  .middle-bottom-left {
+    background-color :white;
+
+  }
+
+  .right-top {
+    background-color: #e3d2dc;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* margin-top: 200px; */
+    /* height: 30%; */
+    /* height: 35%; */
+  }
+
+  .right-bottom {
+    flex: 1;
+    overflow: hidden;
+}
+
+  .middle-transfer-funds-button{
+    background-color: #a8d8fe;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+
+  .img-container{
+    background-color: #a8d8fe;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+  }
+
+  .middle-top-top{
+    height: max-content;
+  }
+
+  .middle-top-top, .middle-top-bottom{
+    width: 100%;
+  }
+  
+  .middle-top-top-left span{
+    color: white;
+  }
+
+  .check{
+      color: #3e3dc5; 
+      border: 2px solid #3e3dc5; 
+      width: 28px; 
+      height: 28px; 
+      border-radius: 50%;
+  }
+
+  .right-bottom a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .active span{
+    color: #3e3dc5 ;
+  }
+  
+.product-logo{
+    background-color: #f4f4f2;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+}
+.activity-list-right, .product-details{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.activity-list-right div, .product-details div{
+    width: 100%;
+}
+.activity-list-right div{
+    text-align: right;
+}
+.gallery{
+    /* width: 90%;
+    margin-left: 10%; */
+}
+.gallery-cell {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.678);
+    padding: 25px;
+    padding-left: 27px ;
+    padding-right: 27px;
+    display: flex;
+    flex-direction: column;    
+    width: 16rem;
+    height: 150px;
+    margin-right: 45px;
+    margin-bottom: 14px;
+    border-radius: 15px;
+    box-shadow: 15px 12px 28px -18px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 15px 12px 28px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 15px 12px 28px -18px rgba(0,0,0,0.75);
+    counter-increment: gallery-cell;
+}
+
+.pic{
+    position: relative;
+    top: -10px;
+    width: 48px;
+    height: 60px;
+}
+
+.activities{
+    overflow:auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    max-height: 100%;
+    width: 100%;
+}
+
+.activities::-webkit-scrollbar{
+    display: none;
+}
+
+.card-logo{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo{
+    width: 25px;
+}
+
+.card-holder-name{
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.card-details{
+    font-size: 12px;
+    align-self: end;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.middle-top-bottom{
+    display: flex;
+    flex-flow: column;
+    align-content: space-between;
+}
+
+.middle-top-bottom div{
+    /* width: 100%; */
+}
+.cover{
+    z-index: 9; 
+    height: 25%; 
+    width: 100%; 
+    position: absolute;
+    bottom: 0;
+    left:0;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(62,62,135,0) 100%);
+}
+
+/* @media screen and (min-height: 2000px) {
+    .middle-top{
+        height: 25vh;
+    }
+    .content{
+        max-height: max-content;
+    }
+        .activities{
+        max-height: 350px;
+    }
+} */
+
+@media screen and (max-width: 1023px) {
+    .content{
+        height: max-content;
+    }
+    .middle-top{
+        height: 50%;
+    }
+    .activities{
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .content{
+        display:block
+    }
+    .middle{
+        width: 100%;
+    }
+    .right{
+        max-width: 100% ;
+    }
+    .gallery-cell{
+        margin-right: 10%;
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .rates, .middle-bottom-left .top{
+        margin: auto;
+    }
+    .middle-bottom{
+        /* flex-direction: column !important; */
+        display: block;
+        height: max-content;
+        /* padding-bottom: 50px; */
+        background-color: #a8d8fe;
+    }
+    .middle-bottom .hidden{
+        padding-bottom: 30px;
+    }
+    .middle-bottom-left{
+        width: 100% !important;
+    }
+    .middle-bottom-right{
+        width: 100%;
+    }
+    .content.closed, .content{
+        /* padding-left: 4rem; */
+    }    
+}
+@media screen and (max-width: 467px) {
+    .middle-top-top{
+        font-size: 13px;
+    }
+    .middle-top-top{
+        display: block !important;
+    }
+    .middle-top-top-left{
+        align-items: flex-start !important;
+    }
+    .middle-top-top-right{
+        font-size: 13px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .middle-top-top-right button{
+        position: relative;
+        bottom: 25px;
+        padding: 0px 5px 0px 5px;
+        border-radius: 5px;
+    }
+}
+@media screen and (max-width: 321px) {
+    .img-container{
+        margin-right: 10px !important;
+    }
+}
+@media screen and (max-width: 350px) {
+    .gallery-cell{
+        width: 14rem;
+        height: 140px;
+    }
+}
